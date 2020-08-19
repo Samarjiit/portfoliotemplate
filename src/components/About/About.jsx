@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
-import AboutImg from '../Image/AboutImg';
+import profile from '../../images/profile.jpg';
 import PortfolioContext from '../../context/context';
 
 const About = () => {
@@ -30,7 +30,7 @@ const About = () => {
           <Col md={6} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
               <div className="about-wrapper__image">
-                <AboutImg alt="profile picture" filename={img} />
+                <img src={profile} alt="Logo" />
               </div>
             </Fade>
           </Col>
@@ -39,14 +39,15 @@ const About = () => {
               <div className="about-wrapper__info">
                 <p className="about-wrapper__info-text">
                   {paragraphOne ||
-                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
+                    'Hey, I’m Ansh Rastogi, a web developer, a blogger and a UPSC Aspirant. '}
                 </p>
                 <p className="about-wrapper__info-text">
                   {paragraphTwo ||
-                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
+                    'Currently, I’m working as a Front-end Web developer at Placement Cell of PGDAV College, University of Delhi. '}
                 </p>
                 <p className="about-wrapper__info-text">
-                  {paragraphThree || 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'}
+                  {paragraphThree ||
+                    'My field of interest seems to be very different from each other but that is what I’m all about. I love reading fiction books. Most recent one is The Harappa Triology by Vineet Bajpai.'}
                 </p>
                 {resume && (
                   <span className="d-flex mt-3">
@@ -54,7 +55,7 @@ const About = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="cta-btn cta-btn--resume"
-                      href={resume}
+                      href="https://drive.google.com/file/d/1m2SMY5FUnykNikm_Z6ufEL10PJUWdO5b/view"
                     >
                       Resume
                     </a>
